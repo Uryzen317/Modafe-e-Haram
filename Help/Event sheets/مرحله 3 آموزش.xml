@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>مرحله 3 آموزش</name>
+    <events>
+        <variable constant="0" name="bullet2" sid="429766492855466" static="0" type="number">100</variable>
+        <event-group description="" sid="682582427118015" title="move and shoot3">
+            <sub-events>
+                <event-block sid="502154432836378">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="240177669259173" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="437911001732866" type="player">
+                            <param id="0" name="Animation">&quot;st&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="506726836180465" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="281580289152904">
+                    <conditions>
+                        <condition id="7" name="On any key released" sid="964853743382650" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="416563905174776" type="player">
+                            <param id="0" name="Animation">&quot;st&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="648009371316833" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="758268745501087">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="638910855266440" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="449315781423080" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="998365942662495" type="player">
+                            <param id="0" name="Animation">&quot;w&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="380787639692934" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="152009174478443">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="597821846964817" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="858757701524618" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="833835580893726" type="player" />
+                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="984284872287148" type="player" />
+                        <condition id="-14" name="Compare variable" sid="211361146560755" type="System">
+                            <param id="0" name="Variable">bullet</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="953675270934554" type="player">
+                            <param id="0" name="Animation">&quot;ws&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="104374762530827" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288487445918685">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="306890517747897" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="515532439575735" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="369632154446501" type="player">
+                            <param id="0" name="Animation">&quot;bw&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="646770591446188" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="622530011231358">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="317576048479357" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="935984799705698" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="845714547202639" type="player" />
+                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="140508408495042" type="player" />
+                        <condition id="-14" name="Compare variable" sid="622158595103041" type="System">
+                            <param id="0" name="Variable">bullet</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="595913447475285" type="player">
+                            <param id="0" name="Animation">&quot;bws&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="581511316911895" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="196177002500625">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="937569248416395" type="player">
+                            <param id="0" name="Animation">&quot;s&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="634707381388281">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="936103316670286" type="player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="817206933917008" type="player">
+                                    <param id="0" name="Animation">&quot;w&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="726738219167721" type="player">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="985464641232816">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="892685142233734" type="player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="606216763245294" type="player">
+                                    <param id="0" name="Animation">&quot;st&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="154096463623671" type="player">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="794397195545925">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="575136117107693" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="715673653567750" type="player" />
+                        <condition id="-14" name="Compare variable" sid="631598539574454" type="System">
+                            <param id="0" name="Variable">bullet</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="648167853357374" type="player">
+                            <param id="0" name="Animation">&quot;s&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="814978311415406" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319409304036748">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="489980960936036" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="437026684209839" type="player" />
+                        <condition id="-14" name="Compare variable" sid="473491982434515" type="System">
+                            <param id="0" name="Variable">bullet</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="528548636101250" type="player">
+                            <param id="0" name="Animation">&quot;s&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="783965262074956" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="903905378640417">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="651614522051734" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="889442595424999" type="player" />
+                        <condition id="-14" name="Compare variable" sid="294869178024496" type="System">
+                            <param id="0" name="Variable">bullet</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="400732029740835" type="player">
+                            <param id="0" name="Animation">&quot;s&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="835907541804867" type="player">
+                            <param id="0" name="Instance variable">shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="601714591552080">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="415612042621441" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="323941925883732">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="784459818253911" type="player">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="511088451524191" type="System">
+                                    <param id="0" name="Variable">bullet</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="455835762844849" type="player">
+                                    <param id="0" name="Object">bullet</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="994107829286338" type="player">
+                                    <param id="0" name="Object">shell</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="933123823082209" type="Audio">
+                                    <param id="0" name="Audio file">bullet</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;1&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="661577542027906" type="System">
+                                    <param id="0" name="Variable">bullet</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="981684039927306" title="bullet3">
+            <sub-events>
+                <event-block sid="857878742898211">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="159849448771901" type="bullet">
+                            <param id="0" name="Object">wall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="294119589162885" type="bullet" />
+                    </actions>
+                </event-block>
+                <event-block sid="600352787515643">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="927813842720248" type="bullet">
+                            <param id="0" name="Object">player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="912345486490501" type="bullet" />
+                        <action id="-12" name="Subtract from" sid="294682637985394" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="929470248433570">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="374859692574664" type="bullet">
+                            <param id="0" name="Object">mchine_gun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="950941206270505" type="bullet" />
+                        <action id="-12" name="Subtract from" sid="315391927097498" type="mchine_gun">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="971155963038124" title="enemys3">
+            <sub-events>
+                <event-block sid="765851681330224">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="105993537832592" type="mchine_gun">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="141395121842514" type="mchine_gun" />
+                        <action id="0" name="Spawn another object" sid="687900108275678" type="mchine_gun">
+                            <param id="0" name="Object">obj_gun_destroyed</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="191598697009823">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="136161029095358" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="944690127044861" type="mchine_gun">
+                            <param id="0" name="Instance variable">shootable</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332377111558163">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="121996890315636" type="mchine_gun">
+                            <param id="0" name="Instance variable">shootable</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="215978021566704" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="775572403205660" type="mchine_gun">
+                            <param id="0" name="Animation">&quot;s&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="378444125237334" type="mchine_gun">
+                            <param id="0" name="Object">bullet</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="298106556192855" type="bullet">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="0" name="Play" sid="753491795542092" type="Audio">
+                            <param id="0" name="Audio file">bullet</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">500</param>
+                            <param id="1" name="Tag (optional)">&quot;3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="740593997527638">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="605010033474293" type="mchine_gun">
+                            <param id="0" name="Instance variable">shootable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="795656151938492" type="mchine_gun">
+                            <param id="0" name="Animation">&quot;i&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="461015665579616" title="more3">
+            <sub-events>
+                <event-block sid="654714619264793">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="537694407694741" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="924881018374026" type="Sprite7">
+                            <param id="0" name="Width">475*loadingprogress</param>
+                        </action>
+                        <action id="0" name="Set text" sid="616359076002772" type="Text4">
+                            <param id="0" name="Text">round (loadingprogress*100) &amp; &quot;%&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600864575571329">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="701601347358219" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="684379294581560" type="System">
+                            <param id="0" name="Layout">startup</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="637416483831372">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="970170568794865" type="player">
+                            <param id="0" name="Object">Sprite6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="772664094093896" type="Sprite6" />
+                        <action id="-10" name="Add to" sid="981187274383465" type="System">
+                            <param id="0" name="Variable">bullet</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="371362586024756">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="721122061504535" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="182520312664391" type="Text">
+                            <param id="0" name="Text">bullet</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="258201443636333">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="175453559180317" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="781708643236765" type="System">
+                            <param id="0" name="Layout">startup</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="401040793584131">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="762260957426609" type="shell" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="355111637047745" type="shell">
+                            <param id="0" name="Instance variable">move</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="740462007300755">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="629370145087209" type="shell">
+                            <param id="0" name="Instance variable">move</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="379007966962141" type="shell">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="313233212485389">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="390191279785079" type="shell">
+                            <param id="0" name="Object">wall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="836957622759393" type="shell" />
+                    </actions>
+                </event-block>
+                <event-block sid="108552092742569">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="343941704995774" type="player">
+                            <param id="0" name="Object">mine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="976176427964562" type="mine" />
+                        <action id="0" name="Spawn another object" sid="301959840384130" type="mine">
+                            <param id="0" name="Object">fire</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="383258555344951" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="0" name="Play" sid="448691196457344" type="Audio">
+                            <param id="0" name="Audio file">sound2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307845453570459">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="371278720087387" type="fire">
+                            <param id="0" name="Animation">&quot;f&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="104512216225753" type="fire" />
+                    </actions>
+                </event-block>
+                <event-block sid="916356832246068">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="129968285647328" type="player">
+                            <param id="0" name="Object">object14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="775928073402986" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="708075581923862">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="227477925724021" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="571344557052170" type="Sprite">
+                            <param id="0" name="Width">player.health</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="975583146769526">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="883301858431636" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="395688440349891" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="554151990788881">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="955954086282491" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="118744668660967">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="124070629242327" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="377212298988312" type="Sprite2">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="544514055297829" type="Sprite">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="142553208628034">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="376175906204412" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">endgame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="793897859753842" type="System">
+                            <param id="0" name="Layout">startup</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="965933287043977">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="953033194566480" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">rahnamai</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="292108585168546" type="System">
+                            <param id="0" name="Layout">startup</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="330787388097304">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="259701186783095" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">object27</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="102844073284904" type="System">
+                            <param id="0" name="Layout">startup</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="750928178669310">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="765383100960050" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="906098028419319" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="776278225419503" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479436682979797">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="524202291886758" type="player">
+                            <param id="0" name="Object">Sprite4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="374919367619800">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="797568260253418" type="player">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="265348311266128" type="Sprite4" />
+                                <action id="-11" name="Add to" sid="879703510186454" type="player">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="615421584556984">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="209781140755236" type="player">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="499736356691715">
+            <conditions>
+                <condition id="0" name="On clicked" sid="637998367902798" type="FlatUiButton3" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="800507963187989" type="System">
+                    <param id="0" name="Layout">startup</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="825498113402391">
+            <conditions>
+                <condition id="0" name="On clicked" sid="186329296324529" type="FlatUiButton2" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="731476014523068" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="939299788824225">
+            <conditions>
+                <condition id="0" name="On clicked" sid="657789599581576" type="FlatUiButton4" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="707454052971608" type="System">
+                    <param id="0" name="Which">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904216843601306">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="619385778595306" type="System" />
+            </conditions>
+            <actions>
+                <action id="-6" name="Set height" sid="287239126360090" type="Sprite">
+                    <param id="0" name="Height">40</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
